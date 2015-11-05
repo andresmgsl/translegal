@@ -1,0 +1,51 @@
+<div ng-controller="Footer as vm" >
+	<div class="footer animated" ng-class="{bigFooter : vm.isDesktop()}" ng-if="vm.showFooter()">
+		
+		<div class="robotArea flexBox center" ng-if="vm.isDesktop()">
+			<div class="imgContainer">
+				<img ng-src="../../../assets/images/footerRobot.png">
+			</div>
+			<div class="formContainer">
+				<h1>{{vm.inqueries.title}}<!--<span>|</span>--></h1>
+				<div ng-repeat="field in vm.inqueries.list">
+					<div class="inputField flexbox center">
+						<label >{{field.title}}</label>
+						<input ng-model="inputFooter" ng-change="vm.replaceText()" type="text">
+					</div>
+				</div>
+				<div class="buttomJoin">
+					<div ng-click="">{{vm.callToAction.list[0].title}}</div>
+				</div>		
+			</div>
+		</div>
+
+		<div class="bottomContainer">
+			<div class="footerText">
+				<div>
+					<img ng-src="{{vm.miniSlogan.img_url}}">
+				</div>
+				<div class="slogan">
+					<h1>{{vm.miniSlogan.title}}</h1>
+					<div class="bottomLine big" style="background-color:#e6e6e6;"></div>
+				</div>
+				<h2>{{vm.miniSlogan.content}}</h2>
+			</div>
+
+			<div class="socialNetworks flexBox center" ng-if="!vm.isMobile()">
+				<div ng-repeat="net in vm.RRSS.list">
+					<div id="{{net.title}}">
+						<a href="{{net.content}}">
+							<img ng-src="../../../assets/images/{{net.img_url}}.png">
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="callToAction" ng-if="!vm.isMobile()">
+				<h1>{{vm.rights.list[0].content}}</h1>
+				<h1>{{vm.rights.list[1].content}}</h1>
+			</div>
+		</div>
+
+	</div>
+</div>

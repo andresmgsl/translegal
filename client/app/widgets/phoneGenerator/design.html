@@ -1,0 +1,22 @@
+<!-- Por default las medidas son width 230px, height 450px y border-radius de 30px -->
+<!-- Las medidas unitarias son width: 2.3px | height: 4.5px | border-radius: 0,3px  -->
+<!-- - Es decir que si se quiere un phone con un width de 460px, se debe usar un 
+     - height de 900px y un border-radius de 60px -->
+
+<div class="iphone">
+	<div class="powerButtom"></div>
+	<div class="circleFocus"></div>
+	<div class="speaker"></div>
+	<div class="sideButtoms lock"></div>
+	<div class="sideButtoms volUp"></div>
+	<div class="sideButtoms volDown"></div>
+	<div class="screen">
+		<div ng-if="linkWithWebsite != undefined">
+			<div class="wallpaper" ng-if="!vm.showWebsite">
+				<h1>{{screenName}}</h1>
+			</div>
+			<iframe width="320px" height="497.5px" ng-if="vm.showWebsite" style="position:absolute;"  ng-src="{{vm.url}}"></iframe>
+		</div>
+	</div>
+	<div class="powerButtom" ng-class="{onCircle : vm.showWebsite}"  ng-click="vm.togglePower()"></div>
+</div>

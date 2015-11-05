@@ -1,0 +1,28 @@
+.screen .wallpaper.ng-enter,
+.screen .wallpaper.ng-leave {
+	transition: all 1s ease;
+}
+
+.screen iframe.ng-enter,
+.screen iframe.ng-leave {
+	transition: all 1s ease;
+}
+
+.screen iframe.ng-enter,
+.screen iframe.ng-leave.ng-leave-active,
+.screen .wallpaper.ng-enter,
+.screen .wallpaper.ng-leave.ng-leave-active {
+	opacity: 0;
+}
+
+.screen iframe.ng-enter.ng-enter-active,
+.screen iframe.ng-leave,
+.screen .wallpaper.ng-enter.ng-enter-active,
+.screen .wallpaper.ng-leave {
+	opacity: 1;
+}
+
+.onCircle {
+	border-color: #4183d7 !important;
+	background-color: #eeeeee !important;
+}

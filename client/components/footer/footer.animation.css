@@ -1,0 +1,15 @@
+.footer.ng-leave,
+.footer.ng-enter {
+	-webkit-transition: all .7s ease ;
+	transition: all .7s ease ;
+}
+
+.footer.ng-leave,
+.footer.ng-enter.ng-enter-active {
+	opacity: 1;
+}
+
+.footer.ng-enter,
+.footer.ng-leave.ng-leave-active {
+	opacity: 0;
+}

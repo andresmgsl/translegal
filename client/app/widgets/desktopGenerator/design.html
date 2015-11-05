@@ -1,0 +1,21 @@
+<!-- Por default las medidas son width 726px, height 520px y border-radius de 20px -->
+<!-- Las medidas unitarias son width: 7.26px | height: 5.2px | border-radius: 0.2px  -->
+<!-- A este beta LE HACE FALTA PASAR MEDIDAS DE PX A %-->
+
+
+<div class="desktop">
+	<div class="case">
+		<div class="borderScreen"></div>
+		<div class="screen">
+			<div ng-if="linkWithWebsite != undefined">
+				<div class="wallpaper" ng-if="!vm.showWebsite">
+					<h1>{{screenName}}</h1>
+				</div>
+				<iframe width="1124" height="569" ng-if="vm.showWebsite" style="position:absolute" ng-src="{{vm.url}}"></iframe>
+			</div>
+		</div>
+		<div class="powerButton" ng-class="{onCircle : vm.showWebsite}" ng-click="vm.togglePower()"></div>
+	</div>
+	<div class="topBase"></div>
+	<div class="bottomBase"></div>
+</div>

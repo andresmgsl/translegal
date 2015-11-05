@@ -1,0 +1,15 @@
+<!-- Por default las medidas son width 550px, height 390px y border-radius de 25px -->
+<!-- Las medidas unitarias son width: 5.5px | height: 3.9px | border-radius: 0.25px  -->
+
+<div class="tablet">
+	<div class="screen">
+		<div ng-if="linkWithWebsite != undefined">
+			<div class="wallpaper" ng-if="!vm.showWebsite">
+				<h1>{{screenName}}</h1>
+			</div>
+			<iframe width="768px" height="612.5px" ng-if="vm.showWebsite" style="position:absolute;"  ng-src="{{vm.url}}"></iframe>
+		</div>
+	</div>
+	<div class="topButtom"></div>
+	<div class="powerButtom" ng-class="{onCircle : vm.showWebsite}" ng-click="vm.togglePower()"></div>
+</div>

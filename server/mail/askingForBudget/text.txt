@@ -1,0 +1,3 @@
+'¿Olvidaste tu contraseña? no te preocupes, te daremos una nueva \n\n' +
+            'http://' + req.headers.host + '/settings/' + token + '\n\n' +
+            'Si no haz solicitado un cambio de contraseña, puedes ignorar este correo\n'

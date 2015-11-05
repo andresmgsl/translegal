@@ -1,0 +1,116 @@
+.iphone {
+	position: relative;
+	width: 230px;
+	height: 450px;
+	background-color: #f6f6f6;
+	border-radius: 30px;
+}
+
+.iphone .powerButtom,
+.iphone .sideButtoms,
+.iphone .circleFocus,
+.iphone .speaker,
+.iphone .screen,
+.iphone .powerButtom  {
+	position: absolute;
+}
+
+.iphone .circleFocus,
+.iphone .speaker,
+.iphone .screen,
+.iphone .powerButtom {
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.iphone .screen {
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+.iphone .screen .wallpaper {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	height: 50px;
+	overflow: auto;
+}
+
+.iphone .screen .wallpaper h1 {
+	font-size: 3em;
+	text-align: center;
+	font-family: "robotica";
+	color: #bbbbbb;
+	margin-left: .085em;
+}
+
+.iphone .screen iframe {
+	transform: scale(.65);
+	-webkit-transform: scale(.65);
+
+	transform-origin: top left;
+	-webkit-transform-origin: top left;
+}
+
+.iphone .circleFocus {
+	width: 3%;
+	height: 1.5%;
+	background-color: #bbbbbb;
+	border-radius: 50%;
+	top: 4%;
+}
+
+.iphone .speaker {
+	width: 16%;
+	height: 1.15%;
+	background-color: #353535;
+	top: 8.5%;
+	border-radius: 50%/350%;
+}
+
+.iphone .sideButtoms {
+	left: -1%;
+	width: 1%;
+	height: 5.3%;
+	background-color: #e6e6e6;
+}
+
+.iphone .sideButtoms.lock {
+	top: 14%;
+}
+
+.iphone .sideButtoms.volUp {
+	top: 24.5%;
+}
+
+.iphone .sideButtoms.volDown {
+	top: 32%;
+}
+
+.iphone .screen {
+	width: 90%;
+	height: 72%;
+	background-color: #343434; 
+}
+
+.iphone .powerButtom {
+	width: 16.5%;
+	height: 8.25%;
+	border-radius: 50%;		
+	bottom: 2.75%;
+	border: 2px solid #cccccc;
+	cursor: pointer;
+	
+	transition: background-color 0.4s ease, border-color 0.6s ease;
+}
+
+.iphone .powerButton:hover {
+	background-color: #eeeeee;
+}

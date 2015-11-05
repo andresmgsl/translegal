@@ -1,0 +1,199 @@
+.container.contact {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.container.contact .title,
+.container.contact .title.middle {
+	font-family: "latos";
+	color: #4183D7;
+}
+
+.container.contact .title {
+	font-size: 2.5em;
+	margin-top: 2.5em;
+	margin-bottom: 1.5em;
+}
+
+.container.contact .title.middle {
+	font-size: 2em;
+	margin-top: 1.875em;
+	margin-bottom: 1em;
+}
+
+.container.contact .formContact {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	font-family: "ubuntu-regular";
+}
+
+.container.contact .formContact .formInputs,
+.container.contact .formContact .formTextArea {
+	margin: 0 auto;
+	margin-bottom: 2em;
+	min-width: 300px;
+	max-width: 400px;
+}
+
+.container.contact .formContact .formInputs input{
+	background-color:#e6e6e6;
+	color:#313A3D;
+}
+
+.container.contact .formContact .formInputs label{
+	background-color:#4183d7;
+	color:#e6e6e6;
+}
+
+.container.contact .formContact .formTextArea .textArea {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.container.contact .formContact .formTextArea .textArea textarea {
+	width: 90%;
+	height: 10em;
+	resize: none;
+	padding: 5%;
+	outline: none;
+	border: none;
+  background-color: #e6e6e6;	
+	font-size: 1.1em;
+	letter-spacing: 0.05em;  
+}
+
+.container.contact .formContact .buttonsContainer {
+	position: relative;
+	width: 130px;
+	margin: 0 auto;
+	margin-bottom: 3.8em;
+}
+
+.container.contact .formContact .buttonsContainer .button {
+	width: 100%;
+	background-color: #4183D7;
+	text-align: center;
+	padding: .5em 0;
+	margin-bottom: .7em;
+	border-radius: 20px;
+	font-family: 'bebas-regular';
+	font-size: 1.3em; 
+	cursor: pointer;
+}
+
+.container.contact .formContact .buttonsContainer .button p {
+	position: relative;
+	top: .1em;
+	color: #e6e6e6;
+}
+
+.container.contact .secondContainer {
+	position: relative;
+	width: 100%;
+	padding-top: .1em;
+	padding-bottom: .1em;
+	background-color: #EFEFEF;
+}
+
+.container.contact .sectionContact {
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 7em;
+	margin-top: 3.5em;
+	min-width: 290px;
+	max-width: 400px;
+}
+
+.container.contact .sectionContact .singleContact {
+	width: 90%;
+	margin: 0 auto;
+	height: 70px;
+	margin-bottom: .5em;
+	overflow: hidden;
+}
+
+.container.contact .sectionContact .singleContact .imgContainer {
+	width: 70px;
+	height: 70px;
+	float: left;
+	background-color: #DADFE1;
+	margin-right: 1em;
+}
+
+.container.contact .sectionContact .singleContact .textContact {
+	margin-top: 1.2em;
+	text-align: center;
+	font-family: 'latos-regular';
+	font-size: 1.2em;
+}
+
+
+@media screen and (min-width: 450px) {
+	.container.contact .sectionContact {
+		border: 1px solid #8fbaef;
+		padding: 1em;
+	}
+}
+
+@media screen and (min-width: 650px) and (max-width: 950px) {
+	.allInputs {
+		display: -webkit-flex;
+	  display: flex;
+	  -webkit-flex-wrap: wrap;
+	  flex-wrap: wrap;
+  	justify-content: center;
+  	-webkit-justify-content: center;
+  	max-width: 672px;
+  	margin: 0 auto;	  
+	}
+
+	.allInputs .formInputs .field {
+		margin-top: 0;
+		margin-bottom: 1em;
+	}
+
+	.container.contact .formContact .formInputs {
+		min-width: 350px;
+	}
+
+	.allInputs .formTextArea .textArea textarea {		
+		height: 11em !important;
+	}
+
+}
+
+@media screen and (min-width: 950px) {
+	.container.contact .formContact .formInputs {
+		display: -webkit-flex;
+	  display: flex;
+	  -webkit-flex-wrap: wrap;
+	  flex-wrap: wrap;
+  	justify-content: center;
+  	-webkit-justify-content: center;
+  	max-width: 920px !important;
+		margin-top: 0;
+		margin-bottom: 1em;  	
+	}
+
+	.container.contact .formContact .formInputs .field{ 
+		width: 33% !important;
+	}	
+
+	.container.contact .formContact .formTextArea {
+		max-width: 920px !important;
+	}
+
+	.container.contact .formContact .formTextArea .textArea {
+		width: 100%;
+	}
+
+	.container.contact .formContact .formTextArea .textArea textarea {		
+		width: 96%;
+		padding: 2%;
+	}
+
+}

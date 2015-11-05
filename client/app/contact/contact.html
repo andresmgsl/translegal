@@ -1,0 +1,52 @@
+<div class="container contact">
+	
+	<div class="title">
+		<div class="topLine" style="background-color:#D2D7D3;"></div>
+		<h1>{{vm.contactForm.title}}</h1>
+		<div class="bottomLine medium" style="background-color:#D2D7D3;"></div>
+	</div>
+
+	<div class="formContact">
+		<div class="allInputs">
+			<div class="slidyForm formInputs">
+				<div ng-repeat="field in vm.contactForm.list" class="field" ng-if="!$last">
+					<label ng-class="{labelShort : vm.form[field.content]}"><p>{{field.title}}</p></label>
+					<input type="text" ng-model="vm.form[field.content]">
+				</div>
+			</div>
+
+			<div class="formTextArea">
+				<div class="textArea">
+					<textarea ng-model="vm.form.content" placeholder="{{vm.contactForm.list[vm.contactForm.list.length - 1].title}}"></textarea>
+				</div>
+			</div>			
+		</div>
+
+		<div class="buttonsContainer">
+			<div class="button" ng-click="vm.askForBudget()">
+				<p irb-aref="start.end">
+						{{vm.contactFormCTA.list[0].title}}
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="secondContainer">
+		<div class="title middle">
+			<div class="topLine medium" style="background-color:#D2D7D3;"></div>
+			<h1>{{vm.contactInfo.title}}</h1>
+			<h1>{{vm.contactInfo.content}}</h1>
+			<div class="bottomLine" style="background-color:#D2D7D3;"></div>
+		</div>
+
+		<div class="sectionContact">
+			<div ng-repeat="info in vm.contactInfo.list" class="singleContact">
+				<div class="imgContainer"></div>
+				<div class="textContact">
+					{{info.content}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

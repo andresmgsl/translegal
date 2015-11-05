@@ -1,0 +1,101 @@
+#cloud-config
+
+---
+users:
+- name: dev
+  passwd: $6$rounds=4096$KVMx1M6rsJs$NSAVhTdhBYTsUMqCbdyPYFeUaC5v.FaOmG02LTT5uZm2gjfz1ugj3BG3KlIdd3LGNXNR3kWaUF/3/1GeEyJ6k.
+  groups:
+  - sudo
+  - docker
+  ssh-authorized-keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD6Etl/CNK0CSUlgkHqyo30NspF8Ohhs15MYaMmF3hpW0zhD3l93pz24FUs2XjHGnMrzoJMs7PAisHwUCngjesqdI0ba/f94fk6DbWhLhxH28vRoSRR2d6Jo+6w0H0WR5eudGouZJoDUPYPhpo23iprV3QBGXjQUGDXWwo/zVArK5gEhD0NHLewC6pTb3zOG2V8V66FztD1HAWS7EwIx6DPjCgIHdXYBznklq/RnrhINSnc9beuETBnoH8iJLo5+zoMPtRop07Y84BfVDQP2FYtBozvG0OrVmhGl23EpnbEEIlDD3mFsrmIjZ+rx+Yki5Qy6QNtQqLTX7uaCDFHilad
+    hector@mini-archector
+coreos:
+  update:
+    group: alpha
+    reboot-strategy: 'off'
+  etcd2:
+    discovery: https://discovery.etcd.io/0a3210b62c469d8419b681faaa0f643f
+    advertise-client-urls: http://$public_ipv4:2379
+    initial-advertise-peer-urls: http://$private_ipv4:2380
+    listen-client-urls: http://0.0.0.0:2379,http://0.0.0.0:4001
+    listen-peer-urls: http://$private_ipv4:2380,http://$private_ipv4:7001
+  fleet:
+    public-ip: $public_ipv4
+    metadata: provider=digitalocean,disk=ssd
+  flannel:
+    interface: $public_ipv4
+  units:
+  - name: etcd2.service
+    command: start
+  - name: fleet.service
+    command: start
+  - name: flanneld.service
+    drop-ins:
+    - name: 50-network-config.conf
+      content: |
+        [Service]
+        ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{ "Network": "10.1.0.0/16" }'
+    command: start
+  - name: docker-tcp.socket
+    command: start
+    enable: true
+    content: |
+      [Unit]
+      Description=Docker Socket for the API
+
+      [Socket]
+      ListenStream=2375
+      Service=docker.service
+      BindIPv6Only=both
+
+      [Install]
+      WantedBy=sockets.target
+  - name: ssh-agent-initializer.service
+    command: start
+    content: |
+      [Unit]
+      Description=ssh-agent-initializer
+      Description=Creates environment file for setting up ENVs on pleiades hosts
+      After=etcd2.service
+      Requires=etcd2.service
+      After=fleet.service
+      Requires=fleet.service
+
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/bin/sh -c "/usr/bin/mkdir -p /home/core/.ssh"
+      ExecStart=/usr/bin/sh -c "/usr/bin/ssh-agent -s "
+      ExecStart=/usr/bin/sh -c "/usr/bin/ssh-add ~/.ssh/id_rsa"
+  - name: init-discovery.service
+    command: start
+    enable: true
+    content: |
+      [Unit]
+      Description=Environment configuration using environment files
+      After=docker.service
+      Requires=docker.service
+      After=environment-initializer.service
+      Requires=environment-initializer.service
+
+      [Service]
+      EnvironmentFile=/home/core/system.env
+      ExecStart=/usr/bin/docker run -d --net host --name docker-discover /
+      -e ETCD_HOST=$ETCD_HOST -p 127.0.0.1:1936:1936 -t jwilder/docker-discover
+  - name: environment-initializer.service
+    command: start
+    content: |
+      [Unit]
+      Description=Creates environment file for setting up ENV's on pleiades hosts
+      After=etcd2.service
+      Requires=etcd2.service
+      After=fleet.service
+      Requires=fleet.service
+
+      [Service]
+      Type=oneshot
+      ExecStart=/usr/bin/sh -c "/usr/bin/echo -n HOST_IP= > /home/core/system.env"
+      ExecStart=/usr/bin/sh -c "/usr/bin/ifconfig | /usr/bin/grep -A 1 'eth0' | /usr/bin/tail -1 | /usr/bin/cut -f10 -d ' ' >> /home/core/system.env"
+      ExecStart=/usr/bin/sh -c "/usr/bin/echo -n 'ETCD_HOST=' >> /home/core/system.env"
+      ExecStart=/usr/bin/sh -c "/usr/bin/ifconfig | /usr/bin/grep -A 1 'eth1' | /usr/bin/tail -1 | /usr/bin/cut -f10 -d ' ' >> /home/core/system.env && echo ':4001' >> /home/core/system.env"
+      ExecStart=/usr/bin/mkdir -p /home/core/data/db

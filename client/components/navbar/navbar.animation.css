@@ -1,0 +1,53 @@
+.navbar.ng-leave,
+.navbar.ng-enter {
+	-webkit-transition: all .7s ease ;
+	transition: all .7s ease ;
+}
+
+.navbar.ng-leave,
+.navbar.ng-enter.ng-enter-active {
+	top: 0;
+}
+
+.navbar.ng-enter,
+.navbar.ng-leave.ng-leave-active {
+	top: -5em; 
+}
+
+.currentStateLine,
+.currentStateLine-add,
+.currentStateLine-remove {
+	position: relative;
+	margin: 0 auto;
+	width: 30px;
+	height: 2px;
+	background-color: #4183d7;
+	top: 1.6em;
+}
+
+.currentStateLine-add {
+	transition:	width .3s linear;
+	width: 0;
+}
+.currentStateLine-add-active {
+	width: 30px;
+}
+
+.currentStateLine-remove {
+	transition:	width .3s linear;
+	width: 30px;
+}
+
+.currentStateLine-remove-active  {
+	width: 0;
+}
+
+.mobileMenu.ng-enter {
+	-webkit-transition: all .7s ease ;
+	transition: all .7s ease ;
+	opacity: 0;
+}
+
+.mobileMenu.ng-enter.ng-enter-active {
+	opacity: 1;
+}

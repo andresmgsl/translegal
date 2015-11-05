@@ -1,0 +1,43 @@
+<div ng-controller="Navbar as vm">
+  <div class="container navbar" ng-class="{navbarOpen : vm.show}" ng-if="vm.showNavbar()">
+
+    <div class="navbarLine unselectable">
+      <div class="logoContainer" irb-aref="home">
+        <div class="imgContainer">
+          <img ng-src="../../../assets/images/logo.png">
+        </div>
+        <p class="nameLogo">
+          IRB<span style="color: #2f3238">.IO</span>
+        </p>
+      </div>
+
+      <div class="hamburguer" ng-click="vm.showMenu()" ng-if="!vm.isDesktop()">
+        <div class="top"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+      </div>
+
+      <div class="optiosContainer flexBox right" ng-if="vm.isDesktop()">
+        <div ng-repeat="option in vm.menu.list" ng-if="$index > 0 && $index < vm.menu.list.length - 1" irb-aref="{{option.content}}">
+          <div>
+            <p>{{option.title}}</p>
+            <div ng-class="{currentStateLine : vm.isActive(option.content)}"></div>
+          </div>
+        </div>
+        <div irb-aref="{{vm.menu.list[vm.menu.list.length - 1].content}}" class="currentState" ng-class="{currentStateActive : vm.isActive(vm.menu.list[vm.menu.list.length - 1].content)}">
+          <p>{{vm.menu.list[vm.menu.list.length - 1].title}}</p>
+        </div>
+        <!--<div irb-aref="start.firstQuestion" class="currentState"><p>ARMALA</p></div> -->
+      </div>
+    </div>
+
+    <div class="mobileMenu" ng-if="vm.show && !vm.isDesktop()">
+      <ul class="states">
+        <li ng-repeat="options in vm.menu.list" ng-click="vm.goAndClose(options.content)">
+          {{options.title}}
+        </li>
+      </ul>    
+    </div>
+
+  </div>
+</div>
