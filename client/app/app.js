@@ -49,7 +49,7 @@ angular.module('hiraApp', [
     }])*/
 
   .run(function ($rootScope, $location, Auth, $log, $http) {
-    $log.info("Made with ♥ by IRB.IO\n\n-You want to work with us? Write a message to job@irb.io-");
+    $log.info("Made with ♥ by IRB.IO\n\nhttp://irb.io/");
     // Redirect to login if route requires auth and you're not logged in
     $rootScope.$on('$stateChangeSuccess',function (event,toState){
       $rootScope.currentState = toState.name;

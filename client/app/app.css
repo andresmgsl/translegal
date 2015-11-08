@@ -10,43 +10,8 @@
 }
 
 @font-face {
-  font-family: 'ubuntu-regular';
-  src: url('../assets/fonts/ubuntu-regular.ttf');
-}
-
-@font-face {
-  font-family: 'bebas-regular';
-  src: url('../assets/fonts/bebas.otf');
-}
-
-@font-face {
-  font-family: 'latos';
-  src: url('../assets/fonts/lato.ttf');
-}
-
-@font-face {
-  font-family: 'latos-regular';
-  src: url('../assets/fonts/latos-regular.ttf');
-}
-
-@font-face {
-  font-family: 'bonveno';
-  src: url('../assets/fonts/BonvenoCF.otf');
-}
-
-@font-face {
-  font-family: 'robotica';
-  src: url('../assets/fonts/Robotica.ttf');
-}
-
-@font-face {
-  font-family: 'AcrossTheRoad';
-  src: url('../assets/fonts/AcrossTheRoad.ttf');
-}
-
-@font-face {
-  font-family: 'Inconsolata';
-  src: url('../assets/fonts/Inconsolata.otf');
+  font-family: 'galette';
+  src: url('../assets/fonts/galette-med.otf');
 }
 
 html {
@@ -55,10 +20,9 @@ html {
 }
 
 body {
-  background: #F6F6F6;
+  background: #f9f9f9;
 }
 
-/* unvisited link */
 a:link {
     text-decoration: none;
 }
@@ -78,28 +42,6 @@ a:active {
     text-decoration: none;
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #4183d7;
-    opacity: 0.5;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #4183d7;
-   opacity: 0.5;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #4183d7;
-   opacity: 0.5;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #4183d7;
-   opacity: 0.5;
-}
-
-::selection {
-  background-color: #073860;
-  color: #f6f6f6;
-}
-
 ::-webkit-scrollbar {
     width: 6px;
     height: 7px;
@@ -111,10 +53,9 @@ a:active {
 }
  
 ::-webkit-scrollbar-thumb {
-    background-color: #1e62b5;
+    background-color: #ad172b;
     border-radius: 3px;
 }
-
 
 .centerX {
   left: 0;

@@ -18,7 +18,8 @@ angular.module('hiraApp.core', [
 	'resizeHandler',
 	'stateChangeHandler',
 	'scroll-animate-directive',
-	'animateStateChange'
+	'animateStateChange',
+	'duScroll'
 ]);
 
 })();

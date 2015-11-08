@@ -3,6 +3,7 @@
 	width: 100%;
 	height: 3.5em;
 	z-index: 15;
+	font-family: "galette";
 }
 
 .container.navbarOpen {
@@ -11,41 +12,10 @@
 
 .container.navbar .navbarLine {
 	width: 100%;
-	height: 4em;
+	height: 5.5em;
 	position: relative;
-	background-color: rgba(246,246,246,0.95);
-	border-bottom: 2px solid #4183d7;
-}
-
-.container.navbar .navbarLine .logoContainer {
-	position: relative;
-	width: 145px;
-	height: 40px;
-	left: 1em;
-	font-family: "robotica";
-	top: .9em;
-	color: #4183d7;
-	cursor: pointer;
-}
-
-.container.navbar .navbarLine .logoContainer .imgContainer {
-	position: relative;
-	height: 40px;
-	width: 40px;
-	float: left;
-}
-
-.container.navbar .navbarLine .logoContainer .imgContainer img {
-	position: absolute;
-	top: .38em;
-	width: 100%;
-}
-
-.container.navbar .navbarLine .logoContainer p{
-	position: relative;
-	font-size: 1.8em;
-	top: .25em;
-	left: .55em;
+	background-color: #ffffff;
+	border-bottom: 1px solid #ad172b;
 }
 
 .container.navbar .navbarLine .hamburguer {
@@ -75,17 +45,16 @@
 
 .container.navbar .navbarLine .optiosContainer {
 	position: absolute;
-	width: 600px;
-	height: 100%;
-	right: 0em;	
-	top: 0;
-	font-family: "ubuntu-regular";
+	width: 450px;
+	height: 50%;
+	right: 6em;	
+	top: 2em;
 	letter-spacing: 0.05em;
 }
 
 .container.navbar .navbarLine .optiosContainer > div {
 	position: relative;
-	font-size: 1.1em;
+	font-size: .85em;
 	padding: 0em 1em;
 	cursor: pointer;
 }
@@ -110,9 +79,10 @@
 	display: none;
 }
 
-.container.navbar .navbarLine .optiosContainer div > p {
+.container.navbar .navbarLine .optiosContainer div > a {
 	position: relative;
 	top: 1.25em;
+	color: #121212;
 }
 
 .container.navbar .mobileMenu {
@@ -133,7 +103,6 @@
 
 	text-align: center;
 	font-size: 2em;
-	font-family: 'latos-regular';
 	color: #e6e6e6;
 	margin-top: 1.5em;
 }

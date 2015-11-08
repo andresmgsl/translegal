@@ -1,0 +1,49 @@
+.transContainer {
+	position: relative;
+	top: 0;
+	margin-top: 0;
+	overflow: auto;
+}
+
+.transContainer .seccion {
+	position: relative;
+	width: 100%;
+	height: 37em;
+	overflow: auto;
+}
+
+.transContainer .seccion p{
+	font-family: "galette";
+	font-size: 5em;
+	color: #ad172b;
+	text-align: center;
+	margin-top: 3em;
+}
+
+.transContainer .seccion .blackScreen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #121212;
+	opacity: 0.6;
+}
+
+.transContainer .part1,
+.transContainer .part3,
+.transContainer .part5 {
+	background-position: 10%;
+	background-size: cover;
+}
+
+.transContainer .part1 {
+	margin-top: 5.5em;
+	background-image: url('../../../assets/images/fondos/1.jpg');
+}
+
+.transContainer .part3 {
+	background-image: url('../../../assets/images/fondos/2.jpg');
+}
+
+.transContainer .part5 {
+	background-image: url('../../../assets/images/fondos/3.jpg');
+}
