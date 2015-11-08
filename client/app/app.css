@@ -14,6 +14,11 @@
   src: url('../assets/fonts/galette-med.otf');
 }
 
+@font-face {
+  font-family: 'ubuntu-regular';
+  src: url('../assets/fonts/ubuntu-regular.ttf');
+}
+
 html {
   position: relative;
   min-height: 100%;

@@ -6,41 +6,12 @@
 	font-family: "galette";
 }
 
-.container.navbarOpen {
-	height: 100% !important;
-}
-
 .container.navbar .navbarLine {
 	width: 100%;
 	height: 5.5em;
 	position: relative;
 	background-color: #ffffff;
 	border-bottom: 1px solid #ad172b;
-}
-
-.container.navbar .navbarLine .hamburguer {
-	width: 35px;
-	height: 25px;
-	position: absolute;
-	right: 1em;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	cursor: pointer;
-}
-
-.container.navbar .navbarLine .hamburguer div {
-	position: relative;
-	width: 100%;
-	height: 25%;
-	margin-bottom: 12.5%;
-	background-color: #4183d7;
-
-	transition: background-color ease 0.3s;
-}
-
-.container.navbar .navbarLine .hamburguer:hover div {
-	background-color: #1f77e2;
 }
 
 .container.navbar .navbarLine .optiosContainer {
@@ -56,58 +27,11 @@
 	position: relative;
 	font-size: .85em;
 	padding: 0em 1em;
-	cursor: pointer;
-}
-
-.container.navbar .navbarLine .optiosContainer .currentState {
-	background-color: #4183d7;
-	color: #e6e6e6;
-
-	-webkit-transition: background-color 0.4s ease;
-	transition: background-color 0.4s ease;
-}
-
-.container.navbar .navbarLine .optiosContainer .currentState:hover {
-	background-color: #1d7ff7;
-}
-
-.container.navbar .navbarLine .optiosContainer .currentStateActive {
-	background-color: #1d7ff7 !important;
-}
-
-.container.navbar .navbarLine .optiosContainer .startButtom {
-	display: none;
 }
 
 .container.navbar .navbarLine .optiosContainer div > a {
 	position: relative;
 	top: 1.25em;
 	color: #121212;
-}
-
-.container.navbar .mobileMenu {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background-color: #4183d7;
-	background-image: url('../../../assets/images/fondos/menu.jpg');
-	background-size: cover;
-	overflow: auto;
-}
-
-.container.navbar .mobileMenu .states {
-	position: relative;
-	margin: auto;
-	width: 90%;
-	height: 12em;
-
-	text-align: center;
-	font-size: 2em;
-	color: #e6e6e6;
-	margin-top: 1.5em;
-}
-
-.container.navbar .mobileMenu .states li {
-	margin-bottom: 1em;
 	cursor: pointer;
 }

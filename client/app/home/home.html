@@ -1,16 +1,67 @@
 <div class="transContainer">
 	<div id="cont1" class="seccion part1">
 		<div class="blackScreen"></div>
+		<div class="content">
+			<div class="imgContainer">
+				<img ng-src="../../../assets/images/logos/logoWhite.png">
+			</div>
+
+			<div class="textContainer">
+				<h1>HELLO</h1>
+				<button>Get to know us <span>better.</span></button>
+			</div>
+		</div>
 	</div>
+
 	<div id="cont2" class="seccion part2">
-		
+		<div class="content">
+			<div class="imgContainer">
+				<img ng-src="../../../assets/images/logos/logo.png">
+			</div>
+
+			<div class="textContainer">
+				<h1>ABOUT US</h1>
+				<div class="threeDots flexBox center">
+					<div class="dot"></div>
+					<div class="dot middle"></div>
+					<div class="dot"></div>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac imperdiet eros. Cras porta justo ut velit faucibus, pellentesque placerat mi hendrerit. Morbi nec ligula pellentesque enim scelerisque pulvinar et eget nulla. Phasellus pulvinar ante non maximus consequat. Sed tempus ligula nisi, a congue justo eleifend ultrices. Integer at odio tincidunt, ornare sem at, hendrerit odio. Duis eu consectetur erat.Sed tempus ligula nisi, a congue justo eleifend ultrices. Integer at odio tincidunt, ornare sem at, hendrerit odio. Duis eu consectetur era.Sed tempus ligula nisi</p>
+				<div class="imgContainer">
+					<img ng-src="../../../assets/images/icons/flatArrowLarge.png">
+				</div>
+			</div>
+
+		</div>
 	</div>
+	
 	<div id="cont3" class="seccion part3">
 		<div class="blackScreen"></div>
+		<div class="content">
+			<div class="textContainer">
+				<h1>WHY WE ARE DIFFERENT</h1>
+				<div class="threeDots flexBox center">
+					<div class="dot"></div>
+					<div class="dot middle"></div>
+					<div class="dot"></div>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac imperdiet eros. Cras porta justo ut velit faucibus, pellentesque placerat mi hendrerit. Morbi nec ligula pellentesque enim scelerisque pulvinar et eget nulla. Phasellus pulvinar ante non maximus consequat. Sed tempus ligula nisi, a congue justo eleifend ultrices. Integer at odio tincidunt, ornare sem at, hendrerit odio. Duis eu consectetur erat.Sed tempus ligula nisi, a congue justo eleifend ultrices. Integer at odio tincidunt, ornare sem at, hendrerit odio. Duis eu consectetur era.Sed tempus ligula nisi</p>
+			</div>
+			<div class="valuesContainer flexBox center wrap ">
+				<div ng-repeat="value in vm.values">
+					<p>{{value.name}}</p>
+					<div class="barValue"></div>
+				</div>
+				<div class="imgContainer">
+					<img ng-src="../../../assets/images/icons/flatArrowLargeWhite.png">
+				</div>
+			</div>
+		</div>
 	</div>	
-	<div id="cont4" class="seccion part4">
-		
+	
+	<div id="cont4" class="seccion part4">	
 	</div>
+	
 	<div id="cont5" class="seccion part5">
 		<div class="blackScreen"></div>
 	</div>	
