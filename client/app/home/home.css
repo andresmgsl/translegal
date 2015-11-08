@@ -69,6 +69,7 @@
 	color: #f6f6f6;
 }
 
+.transContainer .part5 .content > .textContainer .buttonQuote button,
 .transContainer .part1 .content .textContainer button {
 	width: 90%;
 	height: 2em;
@@ -82,6 +83,9 @@
 .transContainer .part2 {
 	height: 23.2em;	
 }
+
+.transContainer .part5 .content,
+.transContainer .part4 .content,
 .transContainer .part3 .content,
 .transContainer .part2 .content {
 	position: relative;
@@ -103,6 +107,8 @@
 	width: 100%;
 }
 
+.transContainer .part5 .content > .textContainer,
+.transContainer .part4 .content > .textContainer,
 .transContainer .part3 .content > .textContainer,
 .transContainer .part2 .content > .textContainer {
 	position: relative;
@@ -110,6 +116,8 @@
 
 }
 
+.transContainer .part5 .content > .textContainer h1,
+.transContainer .part4 .content > .textContainer h1,
 .transContainer .part3 .content > .textContainer h1,
 .transContainer .part2 .content > .textContainer h1 {
 	text-align: center;
@@ -119,27 +127,35 @@
 	font-family: 'galette';
 }
 
+.transContainer .part5 .content > .textContainer .threeDots,
+.transContainer .part4 .content > .textContainer .threeDots,
 .transContainer .part3 .content > .textContainer .threeDots,
 .transContainer .part2 .content > .textContainer .threeDots {
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
+.transContainer .part5 .content > .textContainer .threeDots .dot,
+.transContainer .part4 .content > .textContainer .threeDots .dot,
 .transContainer .part3 .content > .textContainer .threeDots .dot,
 .transContainer .part2 .content > .textContainer .threeDots .dot {
 	position: relative;
-	width: 5px;
-	height: 5px;
-	border-radius: 5px;
+	width: 6px;
+	height: 6px;
+	border-radius: 15px;
 	background-color: #ac1f2d;
 }
 
+.transContainer .part5 .content > .textContainer .threeDots .dot.middle,
+.transContainer .part4 .content > .textContainer .threeDots .dot.middle,
 .transContainer .part3 .content > .textContainer .threeDots .dot.middle,
 .transContainer .part2 .content > .textContainer .threeDots .dot.middle {
 	margin-left: .5em;
 	margin-right: .5em;
 }
 
+.transContainer .part5 .content > .textContainer p,
+.transContainer .part4 .content > .textContainer p,
 .transContainer .part3 .content > .textContainer p,
 .transContainer .part2 .content > .textContainer p {
 	text-align: justify;
@@ -148,10 +164,12 @@
 	line-height: 1.5em;
 }
 
+.transContainer .part4 .content > .textContainer p, 
 .transContainer .part2 .content > .textContainer p  {
-	color: #878787;
+	color: #787878;
 }
 
+.transContainer .part4 .content > .textContainer > .imgContainer,
 .transContainer .part3 .content > .valuesContainer .imgContainer,
 .transContainer .part2 .content > .textContainer > .imgContainer {
 	position: relative;
@@ -161,6 +179,7 @@
 	height: 10px;
 }
 
+.transContainer .part4 .content > .textContainer > .imgContainer img,
 .transContainer .part3 .content > .valuesContainer .imgContainer img,
 .transContainer .part2 .content > .textContainer > .imgContainer img {
 	position: absolute;
@@ -172,11 +191,13 @@
 	height: 32.5em;
 }
 
+.transContainer .part5 .content > .textContainer h1,
 .transContainer .part3 .content > .textContainer h1 {
 	color: #f6f6f6;
 	margin-top: 2em;
 }
 
+.transContainer .part5 .content > .textContainer p,
 .transContainer .part3 .content > .textContainer p {
 	color: #f6f6f6; 
 }
@@ -214,8 +235,52 @@
 	background-color: #ffffff;
 }
 
-.transContainer .part3 .content > .valuesContainer .imgContainer {
+.transContainer .part4 .content > .textContainer h1 {
+	margin-top: 2em;
+}
 
+.transContainer .part4 .content > .textContainer h3 {
+	font-family: 'ubuntu-regular';
+	margin-top: 1em;
+	color: #a6a6a6;
+	line-height: 1.30em;
+}
+
+.transContainer .part4 {
+	height: 32.5em;
+}
+
+.transContainer .part4 .content > .textContainer h3 span {
+	font-style: italic;
+	color: #ac1f2d;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.transContainer .part4 .content > .textContainer .threeDots.big {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: 1em;
+}
+
+.transContainer .part4 .content > .textContainer .threeDots.big > .dot {
+	width: 30px;
+	height: 30px;
+	margin-right: 1em;
+}
+
+.transContainer .part5 {
+	height: 23.5em;
+}
+
+.transContainer .part5 .content > .textContainer .buttonQuote {
+	text-align: center;
+	margin-top: 2em;
+}
+
+.transContainer .part5 .content > .textContainer .buttonQuote button{
+	width: 270px;
+	height: 2.3em;
 }
 
 .transContainer .part5 {
