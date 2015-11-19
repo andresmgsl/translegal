@@ -9,6 +9,7 @@
         <div ng-repeat="option in vm.menu">
           <div>
             <a ng-href="{{option.ref}}" du-smooth-scroll du-scrollspy duration="1500" offset="89.7">{{option.text}}</a>
+            <div class="dot" ng-if="!$last"></div>
           </div>
         </div>
       </div>

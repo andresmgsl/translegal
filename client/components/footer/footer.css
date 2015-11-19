@@ -70,12 +70,13 @@
 
 @media screen and (max-width: 620px) {
 	.footer logo > div {
-		margin-top: 1em;
+		margin-top: .75em;
 	}
 
 	.footer .leftMenu {
-		top: 6.2em;
+		position: relative;
 		font-size: .65em !important; 
+		top: .8em;
 		left: 0;
 		right: 0;
 		margin: 0 auto;

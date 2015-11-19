@@ -16,7 +16,7 @@
 
 .container.navbar .navbarLine .logo > div {
 	left: 10em;
-	top: 1.7em;
+	top: 1.35em;
 }
 
 .container.navbar .navbarLine .optiosContainer {
@@ -31,7 +31,7 @@
 .container.navbar .navbarLine .optiosContainer > div {
 	position: relative;
 	font-size: .85em;
-	padding: 0em 1em;
+	padding: 0em 1.5em;
 }
 
 .container.navbar .navbarLine .optiosContainer div > a {
@@ -45,7 +45,7 @@
 	display: none;	
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 966px) {
 	.container.navbar .navbarLine .logo > div {
 		left: 3em;
 	}
@@ -55,9 +55,10 @@
 	}
 }
 
-@media screen and (max-width: 735px) {
+@media screen and (max-width: 816px) {
 	.container.navbar .navbarLine .logo > div {
 		left: 1em;
+		top: 1em;
 	}
 
 	.container.navbar .navbarLine .optiosContainer {
@@ -83,5 +84,17 @@
 	}
 	.container.navbar .navbarLine .logo > div {
 		left: 0em;
+		top: 1em;
 	}
+}
+
+
+.container.navbar .navbarLine .optiosContainer .dot {
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-radius: 15px;
+	bottom: 1em;
+	right: 0;
+	background-color: #ac1f2d;
 }

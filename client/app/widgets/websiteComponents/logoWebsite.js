@@ -13,17 +13,21 @@
       restrict: "E",
       templateUrl: "app/widgets/websiteComponents/logoWebsite.html",
       scope: {
-        top: "@",
-        left: "@",
-        right: "@",
-        bottom: "@",
-        fontFamily: "@"
+        bigger:"="
       }
     };
 
     return directive;
 
     function link(scope, element) {
+
+      if (scope.bigger) {
+        console.log(element[0].childNodes[0].offsetHeight);
+        console.log(element[0].childNodes[0].offsetWidth);
+        
+      }
+
+
     }
   }
 })();

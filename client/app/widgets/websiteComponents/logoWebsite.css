@@ -1,6 +1,6 @@
 .logoContainer {
 	position: relative;
-	width: 185px;
+	width: 201px;
 	height: 50px;
 	cursor: pointer;
 	color: #121212;
@@ -8,8 +8,7 @@
 
 .logoContainer .imgContainer {
 	position: relative;
-	height: 38px;
-	width: 38px;
+	height: 100%;
 	float: left;
 	
 }
@@ -17,15 +16,15 @@
 .logoContainer .imgContainer img {
 	position: absolute;
 	height: 100%;
-	margin-left: 1em;
+	margin-left: .5em;
 	margin-top: .25em;
 }
 
 .logoContainer p{
 	position: relative;
-	font-size: 1.8em;
+	font-size: 2.3em;
 	top: .25em;
-	left: .15em;
+	left: 1.15em;
 }
 
 .logoContainer p span{
