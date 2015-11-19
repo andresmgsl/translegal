@@ -50,17 +50,23 @@
     }
 
     vm.values = [ {   name : 'QUALITY',
-	                    value: '#cont1' },
+	                    value: '#cont1' ,
+                      size: "95"},
 	                {   name : 'EFFICIENCY',
-	                    value: '#cont2' }, 
+	                    value: '#cont2' ,
+                      size: "98"}, 
 	                {   name : 'RATES',
-	                    value: '#cont3' },
+	                    value: '#cont3' ,
+                      size: "7"},
 	                {   name : 'QUALITY FOR PRICE RATIO',
-	                    value: '#cont4' },
+	                    value: '#cont4' ,
+                      size: "90"},
 	                {   name : 'EXPERIENCE',
-	                    value: '#cont5' },
+	                    value: '#cont5' ,
+                      size: "79"},
 	                {   name : 'CONFIDENTIALITY',
-	                    value: '#cont5' }];
+	                    value: '#cont5' ,
+                      size: "94"}];
   }
 
 })();

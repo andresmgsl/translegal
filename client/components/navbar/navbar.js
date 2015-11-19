@@ -12,11 +12,11 @@ angular.module('hiraApp.navbar')
 		var vm = this;
 
         vm.menu = [ {   text : 'ABOUT',
-                        ref: '#cont1' },
+                        ref: '#cont2' },
                     {   text : 'WHY US',
-                        ref: '#cont2' }, 
+                        ref: '#cont3' }, 
                     {   text : 'SERVICES',
-                        ref: '#cont3' },
+                        ref: '#cont4' },
                     {   text : 'LANGUAGES',
                         ref: '#cont4' },
                     {   text : 'CONTACT',
