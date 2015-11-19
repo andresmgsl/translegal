@@ -6,9 +6,9 @@ else
 	folder=`echo $LOGNAME`
 fi
 
-DEPLOYDIR=/home/$folder/dist-irbio
-APP_NAME=irbio
-WORKDIR=/home/$folder/repo/irbio
+DEPLOYDIR=/home/$folder/dist-translegal
+APP_NAME=translegal
+WORKDIR=/home/$folder/repo/translegal
 
 grunt build --force &>> build.log
 if [[ $? -eq $zero ]]; then	
