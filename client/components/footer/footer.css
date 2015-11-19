@@ -45,12 +45,40 @@
 
 .footer .leftMenu {
 	position: absolute;
-	left: 65.2%;
 	top: 3.6em;
 	font-size: .8em;
 	color: #AC1F2D;
 }
 
-@media screen and (max-width: 1023px) {
-	
+@media screen and (min-width: 1024px) {
+	.footer .leftMenu {
+		left: 65.2%		
+	}
+} 
+
+@media screen and (min-width: 621px) and (max-width: 1023px) {
+	.footer logo > div{
+		margin-left: 3.5em;
+	}
+
+	.footer .leftMenu {
+		top: 4em;
+		right: 5.5em;
+
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.footer logo > div {
+		margin-top: 1em;
+	}
+
+	.footer .leftMenu {
+		top: 6.2em;
+		font-size: .65em !important; 
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		text-align: center;
+	}	
 } 

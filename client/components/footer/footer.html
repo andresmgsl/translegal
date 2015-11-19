@@ -1,6 +1,6 @@
 <div ng-controller="Footer as vm" >
 	<div class="footer">
-		<div class="rightMenu flexBox">
+		<div class="rightMenu flexBox" ng-if="vm.isDesktop()">
 			<div ng-repeat="option in vm.menu" ng-class="{noBorder : $last}">
           <a ng-href="{{option.ref}}" du-smooth-scroll du-scrollspy duration="1500" offset="89.7">{{option.text}}</a>
       </div>

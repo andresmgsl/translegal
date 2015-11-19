@@ -5,12 +5,17 @@
 angular.module('hiraApp.footer')
 	.controller('Footer',Footer);
 
-	Footer.$inject = ['common']
+	Footer.$inject = ['common','resizeHandler','$scope']
 
-	function Footer(common){
+	function Footer(common,resizeHandler,$scope){
 		
 	  var vm = this;
-
+    vm.width = "";
+    vm.isMobile = isMobile;
+    vm.isBigMobile = isBigMobile;
+    vm.isTablet = isTablet;
+    vm.isDesktop = isDesktop;
+  
     vm.menu = [ {   text : 'ABOUT',
                 ref: '#cont1' },
             {   text : 'WHY US',
@@ -22,7 +27,54 @@ angular.module('hiraApp.footer')
             {   text : 'CONTACT',
                 ref: '#cont5' }];
 
+
+    resizeHandler.sizeDevice(callBackResize);
+    activate();
+
+    function activate() {
+      setWidth();
+    }
+
+    function callBackResize(res) {
+      setWidth();
+      $scope.$apply();
+    }
+
+    function setWidth() {
+      vm.width = resizeHandler.getActualDevice();
+    }
+
+    function isMobile() {
+      return vm.width == "mobile";
+    }
+
+    function isBigMobile() {
+      return vm.width ==  "bigMobile";
+    }
+
+    function isTablet() {
+      return vm.width ==  "tablet";
+    }
+
+    function isDesktop() {
+      return vm.width ==  "desktop";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     var element = angular.element(".footer");
+    var handler = onVisibilityChange(element);
 
     function isElementInViewport (el) {
 
@@ -41,14 +93,12 @@ angular.module('hiraApp.footer')
         );
     }
 
-
     function onVisibilityChange (el, callback) {
         return function () {
             /*your code here*/ console.log('visibility ' + isElementInViewport(el));
         }
     }
-    
-    var handler = onVisibilityChange(element);
+
     $(window).on('DOMContentLoaded load resize scroll', handler); 
 
 	}
