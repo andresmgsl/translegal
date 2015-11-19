@@ -1,0 +1,21 @@
+.hamburguer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	cursor: pointer;
+}
+
+.hamburguer div {
+	position: relative;
+	width: 100%;
+	height: 25%;
+	margin-bottom: 12.5%;
+	background-color: #4183d7;
+
+	transition: background-color ease 0.3s;
+}
+
+.hamburguer:hover div {
+	background-color: #1f77e2;
+}

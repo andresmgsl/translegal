@@ -3,7 +3,7 @@
 
   angular
     .module('hiraApp.widgets')
-    .directive('logo', logo);
+    .directive('hamburguer', logo);
 
   logo.$inject = ['common'];
 
@@ -11,13 +11,8 @@
     var directive = { 
       link: link,
       restrict: "E",
-      templateUrl: "app/widgets/websiteComponents/logoWebsite.html",
+      templateUrl: "app/widgets/websiteComponents/hamburguer.html",
       scope: {
-        top: "@",
-        left: "@",
-        right: "@",
-        bottom: "@",
-        fontFamily: "@"
       }
     };
 

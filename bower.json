@@ -14,7 +14,6 @@
     "angular-ui-router": "~0.2.15",
     "ng-parallax": "~0.1.8",
     "jquery": "~2.1.4",
-    "animate.css": "~3.4.0",
     "angular-animate": "~1.4.7",
     "ngSmoothScroll": "~2.0.0"
   },

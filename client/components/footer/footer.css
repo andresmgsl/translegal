@@ -18,10 +18,9 @@
 
 .footer .rightMenu {
 	position: absolute;
-	left: 0;
 	top: 0;
 	height: 10px;
-	margin-left: 9em;
+	right: 64.6%;
 	margin-top: 2.85em; 
 }
 
@@ -46,8 +45,12 @@
 
 .footer .leftMenu {
 	position: absolute;
-	right: 13em;
+	left: 65.2%;
 	top: 3.6em;
 	font-size: .8em;
 	color: #AC1F2D;
 }
+
+@media screen and (max-width: 1023px) {
+	
+} 

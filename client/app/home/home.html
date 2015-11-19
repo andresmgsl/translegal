@@ -14,8 +14,8 @@
 	</div>
 
 	<div id="cont2" class="seccion part2">
-		<div class="squareDetail"></div>
-		<div class="rightLines" line-generator>
+		<div class="squareDetail" ng-if="vm.isDesktop()"></div>
+		<div class="rightLines" line-generator ng-if="vm.isDesktop()">
 		</div>
 		<div class="content">
 			<div class="imgContainer">
@@ -33,12 +33,14 @@
 				<div class="imgContainer">
 					<img ng-src="../../../assets/images/icons/flatArrowLarge.png">
 				</div>
-			</div></div>
+			</div>
+		</div>
+
 	</div>
 	
 	<div id="cont3" class="seccion part3">
 		<div class="blackScreen"></div>
-		<div class="squareDetail"></div>
+		<div class="squareDetail" ng-if="vm.isDesktop()"></div>
 		<div class="content">
 			<div class="textContainer">
 				<h1>WHY WE ARE DIFFERENT</h1>
@@ -62,8 +64,8 @@
 	</div>	
 	
 	<div id="cont4" class="seccion part4">
-		<div class="squareDetail"></div>
-		<div class="rightLines" line-generator></div>
+		<div class="squareDetail" ng-if="vm.isDesktop()"></div>
+		<div class="rightLines" line-generator ng-if="vm.isDesktop()"></div>
 		<div class="content">
 			<div class="textContainer">
 				<h1>SERVICES & LANGUAGES</h1>
@@ -96,7 +98,7 @@
 	
 	<div id="cont5" class="seccion part5">
 		<div class="blackScreen"></div>
-		<div class="squareDetail"></div>
+		<div class="squareDetail" ng-if="vm.isDesktop()"></div>
 		<div class="content">
 			<div class="textContainer">
 				<h1>REQUEST A QUOTE</h1>

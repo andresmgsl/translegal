@@ -81,7 +81,8 @@
 }
 
 .transContainer .part2 {
-	height: 23.2em;	
+	min-height: 23.2em;	
+	height: 100%;
 }
 
 .transContainer .part5 .content,
@@ -90,13 +91,14 @@
 .transContainer .part2 .content {
 	position: relative;
 	margin: 0 auto;
-	width: 600px;
+	max-width: 600px;
+	width: 95%;
 }
 
 .transContainer .part2 .content > .imgContainer {
 	position: relative;
 	margin: 0 auto;
-	margin-top: 1.8em;
+	margin-top: 3em;
 	width: 25px;
 	height: 40px;
 	margin-bottom: 2.5em; 
@@ -175,6 +177,7 @@
 	position: relative;
 	margin: 0 auto;
 	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 	width: 20px;
 	height: 10px;
 }
@@ -188,7 +191,8 @@
 
 .transContainer .part3 {
 	background-image: url('../../../assets/images/fondos/2.jpg');
-	height: 32.5em;
+	min-height: 32.5em;
+	height: 100%;
 }
 
 .transContainer .part5 .content > .textContainer h1,
@@ -247,7 +251,8 @@
 }
 
 .transContainer .part4 {
-	height: 32.5em;
+	min-height: 32.5em;
+	height: 100%;
 }
 
 .transContainer .part4 .content > .textContainer h3 span {
@@ -270,33 +275,36 @@
 }
 
 .transContainer .part5 {
-	height: 23.5em;
+	height: 100%;
 }
 
 .transContainer .part5 .content > .textContainer .buttonQuote {
 	text-align: center;
 	margin-top: 2em;
+	margin-bottom: 4em;
 }
 
 .transContainer .part5 .content > .textContainer .buttonQuote button{
 	width: 270px;
 	height: 2.3em;
+	cursor: pointer;
 }
 
 .transContainer .part5 {
 	background-image: url('../../../assets/images/fondos/3.jpg');
 }
 
-.transContainer .part5 .squareDetail,
-.transContainer .part4 .squareDetail,
-.transContainer .part3 .squareDetail,
-.transContainer .part2 .squareDetail {
+.transContainer .squareDetail {
 	position: absolute;
-	left: 10em;
-	top: 7.5em;
+	left: 13%;
+	top: 5em;
 	width: 21px;
 	height: 21px;
 	z-index: 5;
+}
+
+.transContainer .part2 .squareDetail {
+	top: 8.2em;
 }
 
 .transContainer .part4 .squareDetail,

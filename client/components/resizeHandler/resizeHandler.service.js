@@ -19,7 +19,7 @@
 
     return service;
 
-    var device
+    var device, breakPoints = [];
     
     function getActualWidth() {
       return common.$window.innerWidth
@@ -34,6 +34,14 @@
       return device
     }
 
+    function setBreakpoint(width) {
+      var obj = {
+        "width" : width 
+      }
+      if (breakPoints == undefined) breakPoints =[]; 
+      breakPoints.push(obj);
+    }
+
     function detectDevice() {
       var temp,actualWidth = getActualWidth();
 
@@ -41,6 +49,7 @@
       if ((actualWidth >= 500) && (actualWidth <768)) temp = "bigMobile";
       if ((actualWidth >= 768) && (actualWidth <1024)) temp = "tablet";      
       if (actualWidth >= 1024) temp = "desktop";
+     
 
       return temp;
     }  
