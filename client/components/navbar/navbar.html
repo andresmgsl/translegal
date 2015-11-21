@@ -8,14 +8,24 @@
       <div class="optiosContainer flexBox right">
         <div ng-repeat="option in vm.menu">
           <div>
-            <a ng-href="{{option.ref}}" du-smooth-scroll du-scrollspy duration="1500" offset="89.7">{{option.text}}</a>
+            <a ng-href="{{option.ref}}" du-smooth-scroll du-scrollspy duration="1500" offset="88.9">{{option.text}}</a>
             <div class="dot" ng-if="!$last"></div>
           </div>
         </div>
       </div>
 
-      <hamburguer class="hamburguerIcon"></hamburguer>
+      <hamburguer class="hamburguerIcon" ng-click="vm.showMenu()"></hamburguer>
 
+    </div>
+
+    <div class="menuOptions" style="height: 0px">
+      <div class="listOptions">
+        <div ng-repeat="option in vm.menu" ng-click="vm.showMenu()">
+          <a>
+            {{option.text}}
+          </a>
+        </div>
+      </div>
     </div>
 
   </div>

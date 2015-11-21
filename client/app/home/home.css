@@ -98,6 +98,16 @@
 	outline: 0;
 	border: 2px solid #f6f6f6;
 	color: #f6f6f6;
+	cursor: pointer;
+
+	transition: all 0.3s linear;
+}
+
+.transContainer .part5 .content > .textContainer .buttonQuote button:hover,
+.transContainer .part1 .content .textContainer button:hover {
+	background-color: #f6f6f6;
+	color: #ac1f2d;
+
 }
 
 .transContainer .part1 .content .textContainer button {
@@ -116,7 +126,7 @@
 	position: relative;
 	margin: 0 auto;
 	max-width: 600px;
-	width: 95%;
+	width: 90%;
 }
 
 .transContainer .part2 .content > .imgContainer {
@@ -248,7 +258,7 @@
 	margin-bottom: 1em;
 }
 
-.transContainer .part3 .content > .valuesContainer > div p{
+.transContainer .part3 .content > .valuesContainer > div p {
 	font-size: .9em;
 	font-weight: bold;
 	letter-spacing: .05em;
@@ -368,4 +378,10 @@
 .transContainer .bottomArrow img {
 	position: absolute;
 	width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+	.transContainer .part3 .content > .valuesContainer > div p {
+		font-size: .7em;
+	}
 }

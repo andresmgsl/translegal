@@ -70,8 +70,8 @@ angular.module('hiraApp.footer')
 
 
 
-
-
+    /*Toda esta porquería de abajo hay que entenderla 
+                        mejor para luego refactorizarla en una directiva*/
 
     var element = angular.element(".footer");
     var handler = onVisibilityChange(element);
@@ -104,8 +104,3 @@ angular.module('hiraApp.footer')
 	}
 
 })();
-
-/*
-function 
-
-*/
