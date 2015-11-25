@@ -1,0 +1,160 @@
+.container.navbar {
+	position: fixed;
+	width: 100%;
+	height: 87px;
+	z-index: 15;
+	font-family: "galette";
+}
+
+.container.navbar .navbarLine {
+	width: 100%;
+	height: 87px;
+	position: relative;
+	background-color: #ffffff;
+	border-bottom: 1px solid #ad172b;
+}
+
+.container.navbar .navbarLine .logo > div {
+	left: 10em;
+	top: 1.05em;
+}
+
+.container.navbar .navbarLine .optiosContainer {
+	position: absolute;
+	width: 450px;
+	height: 50%;
+	right: 6em;	
+	top: 2em;
+	letter-spacing: 0.05em;
+}
+
+.container.navbar .navbarLine .optiosContainer > div {
+	position: relative;
+	font-size: .85em;
+	margin-right: 1.2em;
+	margin-left: 1.2em; 
+}
+
+.container.navbar .navbarLine .optiosContainer div > a {
+	position: relative;
+	top: 1.25em;
+	color: #121212;
+	cursor: pointer;
+}
+
+.container.navbar .navbarLine	.hamburguerIcon > div {
+	display: none;	
+}
+
+.container.navbar .menuOptions {
+	position: relative;
+	width: 100%;
+	background-color: #ffffff;
+	overflow: hidden;
+
+	transition: height .5s ease;
+}
+
+.container.navbar .menuOptions .listOptions {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 11em;
+	top: -2em;
+	bottom: 0;
+	margin: auto 0;
+	font-size: 1.6em;
+
+	transition: opacity 0.5s linear;
+
+}
+
+.container.navbar .menuOptions .listOptions div {
+	padding: .75em 0;
+	cursor: pointer;
+
+	transition: background-color .3s ease, color .3s ease;
+}
+
+.container.navbar .menuOptions .listOptions div:hover {
+	background-color: #ad172b;
+}
+
+.container.navbar .menuOptions .listOptions div a {
+	color: #121212;
+
+}
+
+.container.navbar .menuOptions .listOptions div:hover a {
+	color: #f6f6f6;
+}
+
+@media screen and (max-width: 966px) {
+	.container.navbar .navbarLine .logo > div {
+		left: 3em;
+	}
+
+	.container.navbar .navbarLine .optiosContainer {
+		right: 3em;
+	}
+}
+
+@media screen and (max-width: 816px) {
+	.container.navbar .navbarLine .logo > div {
+		left: 1em;
+		top: 1em;
+	}
+
+	.container.navbar .navbarLine .optiosContainer {
+		display: none;
+	}	
+
+	.container.navbar .navbarLine .hamburguerIcon > div {
+		display: block;
+		width: 42px;
+		height: 32px;
+		right: 2em;
+		top: .6em;		
+	}
+
+	.container.navbar .navbarLine .hamburguerIcon > div > div {	
+		background-color: #ad172b;
+	}
+
+	.movilMenuActive {
+	  overflow: hidden;
+	}	
+}
+
+@media screen and (min-width:  817px) {
+	.container.navbar .menuOptions {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 370px) {
+	.container.navbar .navbarLine .hamburguerIcon > div {
+		right: 1em !important;
+	}
+	.container.navbar .navbarLine .logo > div {
+		left: .35em;
+		top: 1em;
+	}
+}
+
+
+.container.navbar .navbarLine .optiosContainer .dot {
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	border-radius: 15px;
+	bottom: 1em;
+	right: -1.4em;
+	background-color: #ac1f2d;
+}
+
+
+.container.navbar .menuOptions .notShow {
+	opacity: 0;
+}
