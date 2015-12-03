@@ -380,6 +380,12 @@
 	width: 100%;
 }
 
+@media screen and (max-width: 720px) {
+	.transContainer .part1 {
+		background-position: 55%;
+	}
+}
+
 @media screen and (max-width: 400px) {
 	.transContainer .part3 .content > .valuesContainer > div p {
 		font-size: .7em;
