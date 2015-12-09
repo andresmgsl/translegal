@@ -25,6 +25,7 @@
 .transContainer .part5 {
 	background-position: 10%;
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 .transContainer .part1 {

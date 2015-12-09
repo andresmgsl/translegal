@@ -45,7 +45,6 @@ angular.module('hiraApp.navbar')
         menuElem.css({'height' : height + 'px'});
         common.$timeout(function(){
           list.removeClass('notShow');
-          console.log('Entra')
         },500);
       }
       else {
