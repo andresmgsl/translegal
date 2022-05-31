@@ -1,4 +1,7 @@
 on:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "*/15 * * * *"
 
@@ -9,7 +12,7 @@ jobs:
     steps:
       - name: Vault Updater
         id: vault-updater
-        uses: heavy-duty/drill-vault-updater-action@v1.0.34
+        uses: heavy-duty/drill-vault-updater-action@v1.0.35
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           rpc-endpoint: ${{ secrets.RPC_ENDPOINT }}
